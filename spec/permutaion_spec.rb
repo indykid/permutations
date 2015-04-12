@@ -1,9 +1,9 @@
-def permutate(options, spaces, size=options.length)
+def permutate(options, spaces)
   if spaces >= 2
     return [permutate_on_spaces(options, spaces)]
   end
 
-  return permutate_on_size(options, size)
+  return permutate_on_size(options, options.length)
 end
 
 def permutate_on_spaces(options, spaces)
