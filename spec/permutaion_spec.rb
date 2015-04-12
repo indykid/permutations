@@ -9,10 +9,10 @@ end
 
 def permutate_on_spaces(options, spaces)
   return [] if spaces == 0
-  return permutate_on_spaces(options, 0) << options[0] if spaces == 1
-  return permutate_on_spaces(options, 0) << options[0] << options[0] if spaces == 2
-  return permutate_on_spaces(options, 0) << options[0] << options[0] << options[0] if spaces == 3
-  return permutate_on_spaces(options, 0) << options[0] << options[0] << options[0] << options[0] if spaces == 4
+  return permutate_on_spaces(options, spaces - 1) << options[0] if spaces == 1
+  return permutate_on_spaces(options, spaces - 1) << options[0] if spaces == 2
+  return permutate_on_spaces(options, spaces - 1) << options[0] if spaces == 3
+  return permutate_on_spaces(options, spaces - 1) << options[0] if spaces == 4
 end
 
 describe "permutation" do
