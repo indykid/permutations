@@ -1,8 +1,8 @@
-def permutate(options, index=options.length)
-  return [] if index == 0
-  return permutate(options, 0) << [options[0]] if index == 1
-  return permutate(options, 1) << [options[1]] if index == 2
-  return [] << [options[0]] << [options[1]] << [options[2]] if index == 3
+def permutate(options, size=options.length)
+  return [] if size == 0
+  return permutate(options, size - 1) << [options[size - 1]] if size == 1
+  return permutate(options, size - 1) << [options[size - 1]] if size == 2
+  return permutate(options, size - 1) << [options[size - 1]] if size == 3
 end
 
 describe "permutation" do
