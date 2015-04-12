@@ -1,18 +1,34 @@
 def permutate(options)
   if options.length == 1
+
     option = options[0]
-    return [[option]]
+    permutation = [option]
+
+    return [permutation]
   end
+
   if options.length == 2
     option1 = options[0]
+    permutation1 = [option1]
+
     option2 = options[1]
-    return [[option1], [option2]]
+    permutation2 = [option2]
+
+    return [permutation1, permutation2]
   end
+
   if options.length == 3
+
     option1 = options[0]
+    permutation1 = [option1]
+
     option2 = options[1]
+    permutation2 = [option2]
+
     option3 = options[2]
-    return [[option1], [option2], [option3]]
+    permutation3 = [option3]
+
+    return [permutation1, permutation2, permutation3]
   end
 end
 
