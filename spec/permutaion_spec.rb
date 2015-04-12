@@ -1,6 +1,6 @@
 def permutate(options, index=options.length)
   return [] if index == 0
-  return [] << [options[0]] if index == 1
+  return permutate(options, 0) << [options[0]] if index == 1
   return [] << [options[0]] << [options[1]] if index == 2
   return [] << [options[0]] << [options[1]] << [options[2]] if index == 3
 end
