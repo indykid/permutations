@@ -2,7 +2,7 @@ def permutate(options)
   result = []
   index  = 0
 
-  if options.length == 1
+  if options.length >= 1
 
     option = options[index]
     permutation = [option]
@@ -11,12 +11,7 @@ def permutate(options)
 
   end
 
-  if options.length == 2
-
-    option = options[index]
-    permutation = [option]
-    result << permutation
-    index += 1
+  if options.length >= 2
 
     option = options[index]
     permutation = [option]
@@ -25,17 +20,7 @@ def permutate(options)
 
   end
 
-  if options.length == 3
-
-    option = options[index]
-    permutation = [option]
-    result << permutation
-    index += 1
-
-    option = options[index]
-    permutation = [option]
-    result << permutation
-    index += 1
+  if options.length >= 3
 
     option = options[index]
     permutation = [option]
