@@ -3,13 +3,17 @@ def permutate(options, spaces, size=options.length)
     return [permutate_on_spaces(options, spaces)]
   end
 
-  return [] if size == 0
-  return permutate(options, spaces, size - 1) << [options[size - 1]]
+  return permutate_on_size(options, size)
 end
 
 def permutate_on_spaces(options, spaces)
   return [] if spaces == 0
   return permutate_on_spaces(options, spaces - 1) << options[0]
+end
+
+def permutate_on_size(options, size)
+  return [] if size == 0
+  return permutate_on_size(options, size - 1) << [options[size - 1]]
 end
 
 describe "permutation" do
