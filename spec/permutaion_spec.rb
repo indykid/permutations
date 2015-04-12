@@ -1,7 +1,13 @@
 def permutate(options)
-  return [[options[0]]] if options == [options[0]]
-  return [[options[0]], [options[1]]] if options == [options[0], options[1]]
-  return [[options[0]], [options[1]], [options[2]]] if options == [options[0], options[1], options[2]]
+  if options.length == 1
+    return [[options[0]]]
+  end
+  if options.length == 2
+    return [[options[0]], [options[1]]]
+  end
+  if options.length == 3
+    return [[options[0]], [options[1]], [options[2]]]
+  end
 end
 
 describe "permutation" do
