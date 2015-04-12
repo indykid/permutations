@@ -1,10 +1,7 @@
 def permutate(options)
-  option = options[0]
-  return [[option]] if options == [option]
-  option2 = options[1]
-  return [[option], [option2]] if options == [option, option2]
-  option3 = options[2]
-  return [[option], [option2], [option3]] if options == [option, option2, option3]
+  return [[options[0]]] if options == [options[0]]
+  return [[options[0]], [options[1]]] if options == [options[0], options[1]]
+  return [[options[0]], [options[1]], [options[2]]] if options == [options[0], options[1], options[2]]
 end
 
 describe "permutation" do
