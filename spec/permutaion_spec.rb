@@ -63,16 +63,18 @@ describe "permutation" do
     end
   end
 
-  it "given one option and three spaces" do
-    expect(permutate([0], 3)).to eq([[0, 0, 0]])
-  end
+  context "given one option and three spaces" do
+    it do
+      expect(permutate([0], 3)).to eq([[0, 0, 0]])
+    end
 
-  it "given one option and three spaces" do
-    expect(permutate([1], 3)).to eq([[1, 1, 1]])
-  end
+    it do
+      expect(permutate([1], 3)).to eq([[1, 1, 1]])
+    end
 
-  it "given one option and three spaces" do
-    expect(permutate([2], 3)).to eq([[2, 2, 2]])
+    it do
+      expect(permutate([2], 3)).to eq([[2, 2, 2]])
+    end
   end
 
 end
