@@ -1,6 +1,8 @@
 def permutate(options, spaces, size=options.length)
   return [[options[0], options[0]]] if spaces == 2
   return [[options[0], options[0], options[0]]] if spaces == 3
+  return [[options[0], options[0], options[0], options[0]]] if spaces == 4
+
   return [] if size == 0
   return permutate(options, spaces, size - 1) << [options[size - 1]]
 end
@@ -76,5 +78,22 @@ describe "permutation" do
       expect(permutate([2], 3)).to eq([[2, 2, 2]])
     end
   end
+
+  context "given one option and four spaces" do
+    it do
+      expect(permutate([0], 4)).to eq([[0, 0, 0, 0]])
+    end
+
+    it do
+      expect(permutate([1], 4)).to eq([[1, 1, 1, 1]])
+    end
+
+    it do
+      expect(permutate([2], 4)).to eq([[2, 2, 2, 2]])
+    end
+  end
+
+
+
 
 end
