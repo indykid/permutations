@@ -1,7 +1,7 @@
 def permutate(options, spaces, size=options.length)
-  return [[0, 0]] if spaces == 2 && options == [0]
-  return [[1, 1]] if spaces == 2 && options == [1]
-  return [[2, 2]] if spaces == 2 && options == [2]
+  return [[options[0], options[0]]] if spaces == 2 && options == [0]
+  return [[options[0], options[0]]] if spaces == 2 && options == [1]
+  return [[options[0], options[0]]] if spaces == 2 && options == [2]
   return [] if size == 0
   return permutate(options, spaces, size - 1) << [options[size - 1]]
 end
