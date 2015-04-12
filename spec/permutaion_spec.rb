@@ -1,7 +1,11 @@
 def permutate(options, spaces, size=options.length)
-  return [[options[0], options[0]]] if spaces == 2
-  return [[options[0], options[0], options[0]]] if spaces == 3
-  return [[options[0], options[0], options[0], options[0]]] if spaces == 4
+  if spaces >= 2
+    return [] if spaces == 0
+    return [[options[0]]] if spaces == 1
+    return [[options[0], options[0]]] if spaces == 2
+    return [[options[0], options[0], options[0]]] if spaces == 3
+    return [[options[0], options[0], options[0], options[0]]] if spaces == 4
+  end
 
   return [] if size == 0
   return permutate(options, spaces, size - 1) << [options[size - 1]]
