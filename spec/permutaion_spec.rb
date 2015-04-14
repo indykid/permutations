@@ -102,6 +102,9 @@ describe "permutation" do
     end
   end
 
+  it "given two spaces and two options" do
+    expect(permutate([0, 1], 2)).to eq([[0, 0], [0, 1], [1, 0], [1, 1]])
+  end
 
 
 
